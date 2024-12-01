@@ -13,7 +13,7 @@ import { NavbarProps } from '../../models/NavbarProps';
 
 const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
     return (
-        <MDBNavbar expand='lg' dark bgColor='dark'>
+        <MDBNavbar expand='sm' dark bgColor='dark'>
             <MDBContainer fluid>
                 <MDBNavbarToggler
                 aria-controls='navbarSupportedContent'
@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = (props: NavbarProps) => {
                     <MDBIcon icon='bars' fas />
                 </MDBNavbarToggler>
                 <MDBCollapse navbar open={props.openBasic}>
-                    <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
+                    <MDBNavbarNav className='mr-auto mb-lg-0'>
                         {props.links.map((link, index) => (
                             <MDBNavbarItem key={index}>
                                 <MDBNavbarLink href={link.href}>{link.name}</MDBNavbarLink>
