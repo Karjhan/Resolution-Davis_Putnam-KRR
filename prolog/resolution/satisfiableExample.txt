@@ -1,0 +1,3 @@
+[[p, n(q), r]].   % Clause: p ∨ ¬q ∨ r
+[[n(p), q]].      % Clause: ¬p ∨ q
+[[n(r)]].         % Clause: ¬r

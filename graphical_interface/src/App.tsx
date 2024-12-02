@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SatSolverContent from './components/SatSolverContent/SatSolverContent';
+import ResolutionContent from './components/ResolutionContent/ResolutionContent';
 
 function App() {
   const [openBasic, setOpenBasic] = useState<boolean>(false); 
@@ -24,7 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<div>Home Page</div>} />
             <Route path="/davis-putnam" element={<SatSolverContent/>} />
-            <Route path="/resolution" element={<div>Resolution Page</div>} />
+            <Route path="/resolution" element={<ResolutionContent/>} />
           </Routes>
         </div>
        

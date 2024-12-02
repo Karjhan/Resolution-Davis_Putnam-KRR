@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { SatSolverComponent } from '../../models/SatSolverComponent';
+import { CaseComponent } from '../../models/CaseComponent';
 
 const SatSolverContent:React.FC = () => {
-  const [cases, setCases] = useState<Array<SatSolverComponent>>([]);
+  const [cases, setCases] = useState<Array<CaseComponent>>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
@@ -10,10 +10,9 @@ const SatSolverContent:React.FC = () => {
   const [output, setOutput] = useState<string | null>(null);
   const [strategy, setStrategy] = useState<number | null>(1);
 
-
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-  const handleButtonClick = (satCase: SatSolverComponent) => {
+  const handleButtonClick = (satCase: CaseComponent) => {
     setSelectedPath(satCase.absolutePath);
     setSelectedContent(satCase.content);  
   };
@@ -49,7 +48,7 @@ const SatSolverContent:React.FC = () => {
     const fetchData = async () => {
       try {
         await delay(2000);
-        const response = await fetch('http://localhost:3001/cases');
+        const response = await fetch('http://localhost:3001/cases-davis-putnam');
         if (!response.ok) {
           throw new Error('Failed to fetch cases');
         }
