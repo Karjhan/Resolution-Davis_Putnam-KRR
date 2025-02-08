@@ -114,7 +114,7 @@ const ResolutionContent:React.FC = () => {
                             </textarea>
                         </div>
                         <div className="form-outline mw-50 m-2" data-mdb-input-init>
-                        <textarea 
+                            <textarea 
                                 className="form-control" 
                                 id="inputContentArea"
                                 rows={4} 
